@@ -1,0 +1,185 @@
+@import "config";
+@import "mixin";
+@import "about";
+@import "contact";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: $primary-font;
+  background: url(../assets/bg.svg);
+background-color: #e4e9ff;
+  background-repeat: no-repeat;
+}
+
+.container {
+  margin: $margin-center;
+  margin-top: 5rem;
+  width: 1538px;
+  height: 870px;
+  border-radius: 3rem;
+  @include shadow-3();
+  // @include centered-flex()
+}
+
+li {
+    list-style: none;
+    a {
+       text-decoration: none;
+    }
+}
+
+header {
+  display: flex;
+
+  .logo {
+    margin: 4rem 8rem;
+    width: 10px;
+
+    img {
+      width: 7rem;
+    }
+  }
+
+  // navigation
+
+  nav {
+    margin: $margin-center;
+
+    margin-left: 14%;
+    ul {
+      display: flex;
+
+      li {
+        padding: 5rem 6rem;
+
+        a {
+          color: $primary-color;
+          // font-size: 2rem;
+          font-weight: 600;
+          // background-color: #fff;
+          background-color: #fff;
+          padding: 5px 35px;
+          border-radius: 2rem;
+          @include shadow-1();
+
+          &:hover {
+              @include shadow-2();
+              background-color: #fff;
+              transition: ease 1.3s;
+          }
+        }
+      }
+    }
+  }
+}
+
+a[href="#"] {
+    @include shadow-2 ();
+}
+
+// **********main************
+
+main {
+  display: flex;
+}
+
+.box1 {
+   
+
+    &__item1 {
+        width: 50%;
+        padding-top: 9rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            font-family: $primary-font;
+            color: $primary-color;
+            font-size: 9rem;
+            padding-top: 8rem;
+            
+            
+        }
+        h3 {
+            color: #6b7abb;
+            font-family: $secondary-font;
+            padding-right: 28rem;
+           
+        }
+
+        .btn-about {
+            padding-right: 25rem;
+            padding-top: 3rem;
+            button {
+                border-style: none;
+                border-radius: 2rem;
+                font-family: $secondary-font;
+                font-weight: 600;
+                padding: 7px 45px;
+                background-color: $secondary-color;
+                
+                @include shadow-1();
+
+                a {
+                  color: white;
+                  text-decoration: none;
+                }
+            }
+        }
+
+        .home-icons {
+            padding-right: 28rem;
+            padding-top: 8rem;
+
+            i {
+                color: #c8d2fc;
+                font-size: 3rem;
+                padding-right: 2rem;
+
+                &:hover {
+                    color: $secondary-color;
+                    transition: 1.3s;
+                }
+            }
+
+        }
+    }
+
+    &__item2 {
+       width: 50%;
+    }
+
+}
+
+
+// *************footer*****************
+
+footer {
+    color: #fff;
+    // padding-left: 100rem;
+
+    h4 {
+        text-align: right;
+        padding-right: 20rem;
+        font-family: $secondary-font;
+        font-weight: 300;
+        margin-top: 2rem;
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+@import "config";
+@import "mixin";
+
+.about-section {
+  display: flex;
+  color: $primary-color;
+
+  .about-box2 {
+    width: 50%;
+
+    &__about-item1 {
+      width: 60%;
+      margin: 15rem 10%;
+
+      h2 {
+        @include h2-size();
+        margin-bottom: 1rem;
+      }
+
+      p,
+      li {
+        font-family: $secondary-font;
+      }
+
+      li {
+        font-weight: 600;
+      }
+
+      .skills {
+        // border-top: 1px solid $secondary-color;
+        margin-top: 3rem;
+
+        ul {
+          margin-top: 1rem;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+        }
+      }
+    }
+
+    &__about-item2 {
+      width: 50%;
+      padding-right: 20rem;
+      @include centered-flex();
+    }
+  }
+}
