@@ -5,36 +5,69 @@
   display: flex;
   color: $primary-color;
 
+  @media (max-width: 768px) {
+        display: block;
+  }
+
   .about-box2 {
     width: 50%;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 
     &__about-item1 {
       width: 60%;
       margin: 15rem 10%;
 
+      @media (max-width: 768px) {
+        width: 70%;;
+        margin: $margin-center;
+        margin-top: 6rem;
+      }
+
       h2 {
         @include h2-size();
         margin-bottom: 1rem;
+
+        @media (max-width: 768px) {
+          text-align: center;
+        }
       }
 
       p,
       li {
         font-family: $secondary-font;
+
+        @media (max-width: 768px) {
+          text-align: justify;
+        }
       }
 
       li {
         font-weight: 600;
+
+        @media (max-width: 768px) {
+          text-align: center;
+          line-height: 2;
+        }
       }
 
       .skills {
         // border-top: 1px solid $secondary-color;
         margin-top: 3rem;
+        text-align: center;
 
         ul {
           margin-top: 1rem;
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
           grid-template-rows: 1fr 1fr;
+
+          @media (max-width: 768px) {
+            display: block;
+            
+          }
         }
       }
     }
@@ -43,6 +76,10 @@
       width: 50%;
       padding-right: 20rem;
       @include centered-flex();
+
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
   }
 }

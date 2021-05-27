@@ -1,17 +1,44 @@
 .contact-section {
-  display: flex;
-  // align-items: center;
-  // justify-content: space-around;
-
+ display: flex;
+  
+ @media (max-width: 768px) {
+  font-size: 1.2rem;
+  display: block;
+  height: 100vh;
+}
   .contact-box1 {
     width: 50%;
     //    background-color: orange;
     @include centered-flex();
 
+    @media (max-width: 768px) {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 1024px) {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+
     .contact-info {
       width: 411px;
       margin-left: 30rem;
       margin-top: 10rem;
+
+      @media (max-width: 768px) {
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 20rem;
+      }
+
+      @media (max-width: 1024px) {
+        width: 90%;
+        margin: 20rem auto;
+        
+      }
 
       h2 {
           color: $primary-color;
@@ -57,6 +84,15 @@
       height: 467px;
       background-color: $form-color;
       border-radius: 10px;
+
+      @media (max-width: 768px) {
+        display: none;
+        
+      }
+
+      @media (max-width: 1024px) {
+        display: none;
+      }
 
       .contact-place {
         margin-bottom: 1rem;

@@ -10,6 +10,10 @@
 </head>
 <body>
     <section class="container">
+        <nav class="navigation">
+            <i class="fas fa-bars"></i>
+        </nav>
+        
         <header>
             <div class="logo">
                 <a href="home.html"><img src="../assets/logo.svg" alt="logo"></a>
@@ -41,17 +45,19 @@
             </div>
 
             <div class="contact-box2">
-                <form action="http://www.foo.com"
+                <form action="https://formspree.io/f/xrgrqgay"
                 method="POST">
                     <div class="contact-place">
                         <div>
                             <input
                              type="text" 
                              id="name" 
+                             name="_name"
                              placeholder="Full Name" 
                              minlength="2" 
                              maxlength="40"
-                             aria-label="Full Name">
+                             required
+                             >
 
                            <label for="name"></label>
                       </div>
@@ -60,10 +66,12 @@
                             <input 
                             type="email" 
                             id="email" 
+                            name="_replyto"
                             placeholder="E-mail" 
                             minlength="12" 
                             maxlength="40"
-                            aria-label="E-mail">
+                            required
+                            >
 
                             <label for="email"></label>
                         </div>
@@ -78,7 +86,7 @@
                     </div>
                     
                     <div class="contact-btn">
-                        <a class="button" href="mailto:kanysharapova@gmail.com">Send me a message</a>
+                        <button type="submit" class="button">Send me a message</button>
                     </div>
                 </form>
             </div>
